@@ -1,0 +1,28 @@
+*{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  .navbar{
+    height: 100px;
+    
+  }
+
+  .carousel{
+      width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+    .description{
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+    }
+
+    footer{
+        background-image: url("https://p4.wallpaperbetter.com/wallpaper/787/1006/327/racing-flag-wallpaper-preview.jpg");
+        position:fixed;
+        left:0px;
+        bottom:0px;
+          height:60px;
+        width:100%;
+      }
