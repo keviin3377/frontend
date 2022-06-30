@@ -50,11 +50,30 @@
 
     footer{
       background-image: url("https://p4.wallpaperbetter.com/wallpaper/787/1006/327/racing-flag-wallpaper-preview.jpg");
-      position:fixed;
-      left:0px;
-      bottom:0px;
-  	  height:60px;
-      width:100%;
+
+    }
+
+    .boton{
+      width: auto;
+      border-radius: 30px;
+      height: 200px;
+      margin: 40px 10px;
+    }
+
+    .marcas{
+      text-align: center;
+      width: 1500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .img{
+      width: 200px;
+      margin: 30px;
+    }
+
+    .icon{
+      margin: 10px;
     }
 </style>
 <header>
@@ -73,13 +92,23 @@
                 <a class="nav-link" href="vehiculos.html">Vehiculos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="vehiculos.html">Ordenes de compra</a>
+                <a class="nav-link" href="ordenes.html">Ordenes de compra</a>
               </li>
               
             </ul>
+            <a href="" class="icon">
+              <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+              <lord-icon
+                src="https://cdn.lordicon.com/gtcqrwnh.json"
+                trigger="loop"
+                colors="primary:#ffffff"
+                style="width:50px;height:50px">
+            </lord-icon>
+            </a>
+           
             <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Busca tu nuevo vehiculo" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Buscar</button>
+              <button class="btn btn-light" type="submit">Buscar</button>
             </form>
           </div>
         </div>
@@ -112,6 +141,24 @@
       </p>
       </div>
         
+    </div>
+
+    <div class="marcas">
+
+      <div>
+        <button class="boton">
+          <img src="img/chevrolet.jpg" alt="" class="img">
+        </button>
+
+        <button class="boton">
+          <img src="img/renault.png" alt="" class="img">
+        </button>
+
+        <button class="boton">
+          <img src="img/logodekia.jpg" alt="" class="img">
+        </button>
+      </div>
+
     </div>
 </body>
 
