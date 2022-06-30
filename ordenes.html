@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Ordenes de compra</title>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
@@ -80,6 +80,17 @@
             background:#302b63;
             color:white;
         }
+
+
+        .avatar{
+          width: 200px;
+        }
+
+
+     .mt-4{
+      width: 1800px;
+    } 
+
     </style>
 </style>
 <header>
@@ -102,7 +113,7 @@
               </li>
               
             </ul>
-            <a href="" class="icon">
+            <a href="index.html" class="icon">
               <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
               <lord-icon
                 src="https://cdn.lordicon.com/gtcqrwnh.json"
@@ -147,18 +158,18 @@
       <table class="table table-bordered table-striped">
         <thead>
           <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>LAST NAME</th>
-            <th>PHONE NUMBER</th>
-            <th>DATE</th>
-            <th>PRODUCT NAME</th>
-            <th>COUNTRY</th>
-            <th>CODE COUNTRY</th>
-            <th>DIRECTION</th>
-            <th>SECONDARY ADDRES</th>
-            <th>PRICE</th>
-            <th>IMAGE</th>
+            <th class="campo">ID</th>
+            <th class="campo">Name</th>
+            <th class="campo">LAST NAME</th>
+            <th class="campo" >PHONE NUMBER</th>
+            <th class="campo">DATE</th>
+            <th class="campo">PRODUCT NAME</th>
+            <th class="campo">COUNTRY</th>
+            <th class="campo">CODE COUNTRY</th>
+            <th class="campo">DIRECTION</th>
+            <th class="campo">SECONDARY ADDRES</th>
+            <th class="campo">PRICE</th>
+            <th class="campo">IMAGE</th>
           
           </tr>
         </thead>
@@ -179,7 +190,7 @@
               console.log(data)
               let body = ""
               for (var i = 0; i < data.length; i++) {      
-                 body+=`<tr><td>${data[i].id}</td><td>${data[i].name}</td><td>${data[i].lastname}</td><td>${data[i].phonenumber}</td><td>${data[i].date}</td><td>${data[i].productname}</td><td>${data[i].country}</td><td>${data[i].codecountry}</td><td>${data[i].direction}</td><td>${data[i].secondaryaddres}</td><td>${data[i].price}</td> <img  src="${data[i].image}" class="card-img-top" alt="..." </td></tr>`
+                 body+=`<tr><td>${data[i].id}</td><td>${data[i].name}</td><td>${data[i].lastname}</td><td>${data[i].phonenumber}</td><td>${data[i].date}</td><td>${data[i].productname}</td><td>${data[i].country}</td><td>${data[i].codecountry}</td><td>${data[i].direction}</td><td>${data[i].secondaryaddres}</td><td>${data[i].price}</td> <td> <img class="avatar" src="${data[i].image}" class="card-img-top" alt="..." </td></tr>`
               }
               document.getElementById('data').innerHTML = body
               //console.log(body)
