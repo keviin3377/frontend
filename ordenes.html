@@ -42,7 +42,7 @@
 
     .content{
       background-color: white;
-      width: 1000px;
+      width: 10000px;
       margin-left: auto;
       margin-right: auto;
       margin: 20px;
@@ -120,24 +120,7 @@
         </div>
     </nav>
 
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item">
-                <img src="img/renault2.jpg" class="d-block w-100" alt="...">
-            </div>
-          <div class="carousel-item active">
-            <img src="img/kia.jpg" class="d-block w-100" alt="...">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
+  
 </header>
 <body>
 
@@ -164,7 +147,7 @@
       <table class="table table-bordered table-striped">
         <thead>
           <tr>
-            <th>Id</th>
+            <th>ID</th>
             <th>Name</th>
             <th>LAST NAME</th>
             <th>PHONE NUMBER</th>
@@ -175,7 +158,7 @@
             <th>DIRECTION</th>
             <th>SECONDARY ADDRES</th>
             <th>PRICE</th>
-            <th>image</th>
+            <th>IMAGE</th>
           
           </tr>
         </thead>
@@ -196,7 +179,7 @@
               console.log(data)
               let body = ""
               for (var i = 0; i < data.length; i++) {      
-                 body+=`<tr><td>${data[i].id}</td><td>${data[i].name}</td><td>${data[i].lastname}</td><td>${data[i].phonenumber}</td><td>${data[i].date}</td><td>${data[i].productname}</td><td>${data[i].country}</td><td>${data[i].codecountry}</td><td>${data[i].direction}</td><td>${data[i].secondaryaddres}</td><td>${data[i].price}</td><td>${data[i].image}</td></tr>`
+                 body+=`<tr><td>${data[i].id}</td><td>${data[i].name}</td><td>${data[i].lastname}</td><td>${data[i].phonenumber}</td><td>${data[i].date}</td><td>${data[i].productname}</td><td>${data[i].country}</td><td>${data[i].codecountry}</td><td>${data[i].direction}</td><td>${data[i].secondaryaddres}</td><td>${data[i].price}</td> <img  src="${data[i].image}" class="card-img-top" alt="..." </td></tr>`
               }
               document.getElementById('data').innerHTML = body
               //console.log(body)
