@@ -74,6 +74,13 @@
     .icon{
       margin: 10px;
     }
+
+   
+      table thead {
+            background:#302b63;
+            color:white;
+        }
+    </style>
 </style>
 <header>
     <nav class="navbar navbar-expand-lg bg-light navbar-dark bg-dark border-bottom box-shadow mb-3">
@@ -151,6 +158,53 @@
       </div>
 
     </div>
+
+
+    <div class="container mt-4 shadow-lg p-3 mb-5 bg-body rounded">
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>LAST NAME</th>
+            <th>PHONE NUMBER</th>
+            <th>DATE</th>
+            <th>PRODUCT NAME</th>
+            <th>CODE COUNTRY</th>
+            <th>DIRECTION</th>
+            <th>SECONDARY ADDRES</th>
+            <th>PRICE</th>
+            <th>image</th>
+          
+          </tr>
+        </thead>
+        <tbody id="data">
+        </tbody>
+      </table>
+    </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  
+      <script>
+        let url = 'https://hidden-inlet-46643.herokuapp.com/api/v1/envios';
+          fetch(url)
+              .then( response => response.json() )
+              .then( data => mostrarData(data) )
+              .catch( error => console.log(error) )
+  
+          const mostrarData = (data) => {
+              console.log(data)
+              let body = ""
+              for (var i = 0; i < data.length; i++) {      
+                 body+=`<tr><td>${data[i].id}</td><td>${data[i].name}</td><td>${data[i].lastname}</td><td>${data[i].phonenumber}</td><td>${data[i].date}</td><td>${data[i].productname}</td><td>${data[i].codecountry}</td><td>${data[i].direction}</td><td>${data[i].secondaryaddres}</td><td>${data[i].price}</td><td>${data[i].image}</td></tr>`
+              }
+              document.getElementById('data').innerHTML = body
+              //console.log(body)
+          }
+      </script>
+
+
+
+
 </body>
 
 <footer>
